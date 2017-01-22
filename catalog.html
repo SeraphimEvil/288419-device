@@ -3,28 +3,31 @@
 <head>
 	<meta charset="UTF-8">
 	<title>HTML Academy: Девайс - Каталог</title>
+	<link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
 	<header class="page-header">
 		<div class="container">
-			<div class="site-logo">DEVICE</div>
+			<div class="site-logo"><a href="index.html">DEVICE</a></div>
 			<div class="user-interactive">
 				<div class="header__left-side">
-					<span></span><input type="text" placeholder="Поиск по сайту">
+					<form action="" method="post">
+						<input type="text" placeholder="Поиск по сайту">
+					</form>
 				</div>
 				<div class="header__rigth-side">
 					<div class="user-block">
-			            <a class="login" href="#"><span></span>Войти</a>
+			            <a class="login" href="#">Войти</a>
 			        </div>
 			        <div class="user-addition">
-			        	<a class="compare" href="#"><span></span>Сравнить</a>
-			        	<a class="cart" href="#"><span></span>Корзина</a>
+			        	<a class="compare" href="#">Сравнить</a>
+			        	<a class="cart" href="#">Корзина</a>
 			        </div>
 				</div>
 			</div>
-			<div class="user-navigation">
+			<nav class="user-navigation">
 				<div class="header__left-side">
-					<a href="#" class="catalog">Каталог товаров<span></span></a>
+					<a class="catalog">Каталог товаров</a>
 				</div>
 				<div class="header__rigth-side">
 					<div class="user-navigation__left">
@@ -35,8 +38,8 @@
 						<a href="#">Контакты</a>
 					</div>
 				</div>
-			</div>
-			<div class="user-navigation__hidden">
+			</nav>
+			<div class="sub-menu">
 				<ul>
 					<li>
 						<a href="#">Виртуальная реальность</a>
@@ -67,19 +70,24 @@
 	<main class="contaner">
 		<h1>Моноподы для селфи</h1>
 		<nav class="breadcrumbs">
-			<li>
-				<a href="index.html">Главная</a>
-			</li>
-			<li>
-				<a href="#">Каталог товаров</a>
-			</li>
-			<li>
-				<span>Моноподы для селфи</span>
-			</li>
+			<ul>
+				<li>
+					<a href="index.html">Главная</a>
+				</li>
+				<li>
+					<a href="#">Каталог товаров</a>
+				</li>
+				<li>
+					<a>Моноподы для селфи</a>
+				</li>
+			</ul>
 		</nav>
 
 		<section class="catalog__left-side">
-			<b>Фильтр:</b>
+			<div class="left-side__header">
+				<h2>Фильтр:</h2>
+			</div>
+			
 			<form action="" method="post">
 				<b>Стоимость</b><br>
 
@@ -98,67 +106,73 @@
 				</div>
 
 				<b>Цвет</b>
-				<br>
-					<input type="checkbox" name="color" checked><label for="color">Черный</label>
-						<br>
-					<input type="checkbox" name="color"><label for="color">Белый</label>
-						<br>
-					<input type="checkbox" name="color" checked><label for="color">Синий</label>
-						<br>
-					<input type="checkbox" name="color" checked><label for="color">Красный</label>
-						<br>
-					<input type="checkbox" name="color"><label for="color">Розовый</label>
-						<br>
+					<input type="checkbox" id="black-color" name="color" value="black" checked><label for="black-color">Черный</label>
+
+					<input type="checkbox" id="white-color" name="color" value="white"><label for="white-color">Белый</label>
+
+					<input type="checkbox" id="blue-color" name="color" value="blue" checked><label for="blue-color">Синий</label>
+
+					<input type="checkbox" id="red-color" name="color" value="red" checked><label for="red-color">Красный</label>
+
+					<input type="checkbox" id="pink-color" name="color" value="pink"><label for="pink-color">Розовый</label>
+
 
 				<b>Bluetooth</b>
-				<br>
-					<input type="radio" name="bluetooth" checked><label for="bluetooth">Есть</label>
-						<br>
-					<input type="radio" name="bluetooth"><label for="bluetooth">Нет</label>
-						<br>
 
-				<button class="btn">Показать</button>
+					<input type="radio" id="bluetooth-do" name="bluetooth" checked><label for="bluetooth-do">Есть</label>
+
+					<input type="radio" id="bluetooth-dont" name="bluetooth"><label for="bluetooth-dont">Нет</label>
+
+
+				<button type="sumbit" class="btn">Показать</button>
 			</form>
 		</section>
 
 		<section class="catalog__right-side">
-			<b>Сортировка:</b>  <span>По цене</span> <span>По типу</span> <span>По популярности</span>
-			
+			<div class="right-side__header">
+				<h2>Сортировка:</h2>  <a>По цене</a> <a>По типу</a> <a>По популярности</a>
+			</div>
 			
 			<div class="catalog">
 				<aticle class="catalog__item">
 					<img class="catalog__item-image" src="img/item1.png" alt="Товар 1" width="360" height="380">
-					<span class="catalog__item-description">Любительская селфи-палка</span>
+					<h3 class="catalog__item-description">Любительская селфи-палка</h3>
 						<span class="catalog__item-price">500 руб.</span>	
 				</aticle>
 				<aticle class="catalog__item">
 					<img class="catalog__item-image" src="img/item2.png" alt="Товар 2" width="360" height="380">
-					<span class="catalog__item-description">Профессиональная селфи-палка</span>
+					<h3 class="catalog__item-description">Профессиональная селфи-палка</h3>
 						<span class="catalog__item-price">1500 руб.</span>
 				</aticle>
 				<aticle class="catalog__item">
 					<img class="catalog__item-image" src="img/item3.png" alt="Товар 3" width="360" height="380">
-					<span class="catalog__item-description">Непотопляемая селфи-палка</span>
+					<h3 class="catalog__item-description">Непотопляемая селфи-палка</h3>
 						<span class="catalog__item-price">2 500 руб.</span>
 				</aticle>
 				<aticle class="catalog__item">
 					<img class="catalog__item-image" src="img/item4.png" alt="Товар 4" width="360" height="380">
-					<span class="catalog__item-description">Селфи-палка &laquo;Следуй за мной&raquo;</span>
+					<h3 class="catalog__item-description">Селфи-палка &laquo;Следуй за мной&raquo;</h3>
 						<span class="catalog__item-price">4 900 руб.</span>
 				</aticle>
 			</div>
-			<div class="page-selectors">
-				<div class="backward">
-					<button>Назад</button>
-				</div>
-				<div class="select-page">
-					<span href="#">1</span>
-					<a href="#">2</a>
-					<a href="#">3</a>
-				</div>
-				<div class="forward">
-					<button>Вперед</button>
-				</div>
+			<div class="paginator">
+				<ul>
+					<li class="prev">
+						<a>Назад</a>
+					</li>
+					<li>
+						<a>1</a>
+					</li>
+					<li>
+						<a href="#">2</a>
+					</li>
+					<li>
+						<a href="#">3</a>
+					</li>
+					<li class="next">
+						<a>Вперед</a>						
+					</li>
+				</ul>
 			</div>
 		</section>
 	</main>
@@ -168,9 +182,9 @@
 			<div class="footer__top">
 				<div class="footer__logo">DEVICE</div>
 				<div class="footer__user-nav">
-					<a href="#"><span></span>Войти</a>
-					<a href="#"><span></span>Сравнить</a>
-					<a href="#"><span></span>Корзина</a>
+					<a href="#">Войти</a>
+					<a href="#">Сравнить</a>
+					<a href="#">Корзина</a>
 				</div>
 			</div>
 			<div class="footer__mid">
