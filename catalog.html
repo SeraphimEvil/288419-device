@@ -89,9 +89,9 @@
 			</div>
 			
 			<form action="" method="post">
-				<b>Стоимость</b><br>
+				<legend>Стоимость</legend>
 
-				<div class="range-filter">
+				<fieldset class="range-filter">
 					<div class="range-controls">
 						<div class="scale">
 							<div class="bar"></div>
@@ -103,9 +103,10 @@
 						<label class="min-price"> от <input type="text" name="min-price" value="0"></label>
 						<label class="max-price"> до <input type="text" name="max-price" value="5 000"></label>
 					</div>
-				</div>
+				</fieldset>
 
-				<b>Цвет</b>
+				<legend>Цвет</legend>
+				<fieldset>
 					<input type="checkbox" id="black-color" name="color" value="black" checked><label for="black-color">Черный</label>
 
 					<input type="checkbox" id="white-color" name="color" value="white"><label for="white-color">Белый</label>
@@ -115,14 +116,14 @@
 					<input type="checkbox" id="red-color" name="color" value="red" checked><label for="red-color">Красный</label>
 
 					<input type="checkbox" id="pink-color" name="color" value="pink"><label for="pink-color">Розовый</label>
+				</fieldset>
 
 
-				<b>Bluetooth</b>
-
+				<legend>Bluetooth</legend>
+				<fieldset>
 					<input type="radio" id="bluetooth-do" name="bluetooth" checked><label for="bluetooth-do">Есть</label>
-
 					<input type="radio" id="bluetooth-dont" name="bluetooth"><label for="bluetooth-dont">Нет</label>
-
+				</fieldset>
 
 				<button type="sumbit" class="btn">Показать</button>
 			</form>
