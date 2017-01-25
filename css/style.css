@@ -1,0 +1,90 @@
+@font-face {
+	font-family: "GilroyBold";
+	font-style: normal;
+ 	src: 
+ 		url("../fonts/gilroyextrabold.woff") format("woff");
+}
+
+@font-face {
+	font-family: "GilroyLight";
+	font-style: normal;
+	src:
+ 		url("../fonts/gilroylight.woff") format("woff");
+}
+
+html,
+body {
+    min-width: 1440px;
+    min-height: 2795px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	font-family: "GilroyBold", "Open Sans", Arial, sans-serif;
+    font-size: 18px;
+    color: #000000;
+}
+
+a  {
+	color: #000000;
+	text-decoration: none;
+}
+
+
+/* PAGE HEADER */
+.header-container {
+	width: 1160px;
+	margin: 0 auto;
+	padding: 0 60px;
+	z-index: 10;
+	background-color: #f7e296;
+	background-position: 10% 10%;
+}
+
+/*.header-container::before {
+	position: absolute;
+	content: "";
+	background-color: #f7e296;
+	top: 40px;
+	width: 1160px;
+	height: 300px;
+	z-index: 1;
+}*/
+
+.site-logo {
+	/*z-index: 10;*/
+	padding-top: 12px;
+	font-size: 48px;
+	/*height: 90px;*/
+	/*line-height: 57px;*/
+}
+
+.user-interactive {
+	/*z-index: 10;*/
+	display: flex;
+	justify-content: space-between;
+	outline: 1px solid red;
+}
+
+.header__left-side {
+	width: 540px;
+	outline: 1px solid red;
+}
+
+.header__rigth-side {
+	width: 500px;
+	display: flex;
+	justify-content: space-between;
+	outline: 1px solid red;
+}
+
+.user-block {
+	width: 280px;
+}
+
+.user-addition {
+	width: 220px;
+	display: flex;
+	justify-content: space-between;
+}
