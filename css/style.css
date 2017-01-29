@@ -357,40 +357,39 @@ a  {
 	opacity: 0.3;
 }
 
-.feauteres__item:nth-child(1)  .feauteres__link {
-	background-image: url(../img/popular-1.png);
+.feauteres--VR,
+.feauteres--Mono-Self,
+.feauteres--Action-Cam,
+.feauteres--fitness,
+.feauteres--smart-watch,
+.feauteres--quadrocopter {
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 }
 
-.feauteres__item:nth-child(2)  .feauteres__link {
+.feauteres--VR {
+	background-image: url(../img/popular-1.png);
+}
+
+.feauteres--Mono-Self {
 	background-image: url(../img/popular-2.png);
-	background-repeat: no-repeat;
 	background-position: 50% 100%;
 }
 
-.feauteres__item:nth-child(3)  .feauteres__link {
+.feauteres--Action-Cam {
 	background-image: url(../img/popular-3.png);
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
 }
 
-.feauteres__item:nth-child(4)  .feauteres__link {
+.feauteres--fitness {
 	background-image: url(../img/popular-4.png);
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
 }
 
-.feauteres__item:nth-child(5)  .feauteres__link {
+.feauteres--smart-watch {
 	background-image: url(../img/popular-5.png);
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
 }
 
-.feauteres__item:nth-child(6)  .feauteres__link {
+.feauteres--quadrocopter {
 	background-image: url(../img/popular-6.png);
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
 }
 
 .feauteres__title {
@@ -478,7 +477,7 @@ a  {
 	font-weight: 900;
 }
 
-.feednack__promo {
+.feedback__promo {
 	font-family: "Open Sans", "Arial", sans-serif;
 	font-weight: 300;
 	font-size: 15px;
