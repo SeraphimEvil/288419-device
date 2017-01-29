@@ -10,11 +10,11 @@
 <body>
 	<header class="page-header">
 		<div class="header-container__catalog">
-			<a href="index.html"><div class="site-logo">DEVICE</div></a>
+			<div class="site-logo"><a class="site-logo" href="index.html">DEVICE</a></div>
 			<div class="user-interactive">
 				<div class="header__left-side">
 					<form class="search-form" action="" method="post">
-						<input class="site-search" type="text" value="Поиск по сайту">
+						<input class="site-search" type="text" placeholder="Поиск по сайту">
 					</form>
 				</div>
 				<div class="header__rigth-side">
@@ -30,6 +30,32 @@
 			<nav class="user-navigation">
 				<div class="header__left-side">
 					<a class="nav__catalog"">Каталог товаров</a>
+						<div class="sub-menu">
+							<ul class="sub-menu__list">
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="#">Виртуальная реальность</a>
+								</li>
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="#">Моноподы для селфи</a>
+								</li>
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="#">Экшн-камеры</a>
+								</li>
+							</ul>
+							<ul class="sub-menu__list">
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="#">Фитнесс-браслеты</a>
+								</li>
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="#">Умные часы</a>
+								</li>
+							</ul>
+							<ul class="sub-menu__list">
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="#">Квадрактоптеры</a>
+								</li>
+							</ul>
+						</div>
 				</div>
 				<div class="header__rigth-side">
 					<div class="user-navigation__left">
@@ -41,32 +67,6 @@
 					</div>
 				</div>
 			</nav>
-			<div class="sub-menu">
-				<ul class="sub-menu__list">
-					<li class="sub-menu__item">
-						<a class="sub-menu__link" href="#">Виртуальная реальность</a>
-					</li>
-					<li class="sub-menu__item">
-						<a class="sub-menu__link" href="#">Моноподы для селфи</a>
-					</li>
-					<li class="sub-menu__item">
-						<a class="sub-menu__link" href="#">Экшн-камеры</a>
-					</li>
-				</ul>
-				<ul class="sub-menu__list">
-					<li class="sub-menu__item">
-						<a class="sub-menu__link" href="#">Фитнесс-браслеты</a>
-					</li>
-					<li class="sub-menu__item">
-						<a class="sub-menu__link" href="#">Умные часы</a>
-					</li>
-				</ul>
-				<ul class="sub-menu__list">
-					<li class="sub-menu__item">
-						<a class="sub-menu__link" href="#">Квадрактоптеры</a>
-					</li>
-				</ul>
-			</div>
 		</div>
 	</header>
 
@@ -92,10 +92,10 @@
 					<h2 class="catalog__title">Фильтр:</h2>
 				</div>
 				
-				<form action="" method="post">
+				<form action="" method="get">
 
 					<fieldset class="range-filter">
-					<legend class="form__title">Стоимость</legend>
+						<legend class="form__title">Стоимость</legend>
 						<div class="range-controls">
 							<div class="scale">
 								<div class="bar"></div>
@@ -111,7 +111,7 @@
 
 				
 					<fieldset>
-					<legend class="form__title">Цвет</legend>
+						<legend class="form__title">Цвет</legend>
 						<input type="checkbox" id="black-color" name="color" value="black" checked><label for="black-color">Черный</label>
 
 						<input type="checkbox" id="white-color" name="color" value="white"><label for="white-color">Белый</label>
@@ -126,12 +126,12 @@
 
 				
 					<fieldset>
-					<legend class="form__title">Bluetooth</legend>
+						<legend class="form__title">Bluetooth</legend>
 						<input type="radio" id="bluetooth-do" name="bluetooth" checked><label for="bluetooth-do">Есть</label>
 						<input type="radio" id="bluetooth-dont" name="bluetooth"><label for="bluetooth-dont">Нет</label>
 					</fieldset>
 
-					<a type="sumbit" class="btn" style="cursor: pointer">Показать</a>
+					<button type="sumbit" class="btn">Показать</button>
 				</form>
 			</section>
 
@@ -226,7 +226,7 @@
 					<a href="#">Instagram</a>
 					<a href="#">Twitter</a>
 				</div>
-				<div class="html-Academy"><img src="img/htmlacademy.png" alt=""></div>
+				<div class="html-academy"><img src="img/htmlacademy.png" alt="HTMLAcademy" width="27" height="34"></div>
 			</div>
 		</div>
 	</footer>

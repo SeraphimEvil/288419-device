@@ -132,7 +132,7 @@ a  {
 	color: #464646;
 }
 
-.site-search:focus{
+.site-search:focus {
 	border-bottom: 2px solid #000000;
 	color: #000000;
 }
