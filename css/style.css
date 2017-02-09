@@ -1200,6 +1200,7 @@ a  {
 	margin-right: 27px;
 }
 
+
 /* Фильтр цвета */
 
 .checkbox-zone  .form__title {
@@ -1234,20 +1235,26 @@ a  {
     position: absolute;
     top: -2px;
     left: 0;
-
-
     height: 23px;
     width: 23px;
-
   	background-color: #dbdbdb
 }
+
+.filter-color input[type="checkbox"] + .checkbox-indicator:hover,
+.filter-color input[type="checkbox"] + .checkbox-indicator:checked:hover {
+	background-color: #cecece;
+} 
+
+.filter-color input[type="checkbox"] + .checkbox-indicator:active,
+.filter-color input[type="checkbox"] + .checkbox-indicator:checked:active {
+	background-color: #c4c4c4;
+} 
 
 .filter-color input[type="checkbox"]:checked + .checkbox-indicator::before {
     content: "";
     position: absolute;
     top: 14px;
     left: 7px;
-
     height: 1px;
     width: 4.5px;
     transform: rotate(45deg);
@@ -1259,7 +1266,6 @@ a  {
     position: absolute;
     top: 12px;
     left: 9px;
-
     height: 1px;
     width: 10px;
     transform: rotate(-45deg);
@@ -1267,6 +1273,70 @@ a  {
 }
 
 
+/* Фильтр переключателя наличия Bluetooth */
+.radio-zone {
+	margin-bottom: 35px;
+}
+.radio-zone  .form__title {
+	margin-bottom: 10px;
+}
+
+.radio-zone ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.radio-zone label input[type="radio"] {
+    display: none;
+}
+
+.radio-zone label {
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 40px;
+	font-weight: 300;
+}
+
+.filter-bluetooth {
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+}
+
+
+.filter-bluetooth input[type="radio"] + .radio-indicator {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 19px;
+    width: 19px;
+    border-radius: 50%;
+    border: 2px solid #c6c6c6;
+  	background-color: #efefef;
+}
+
+.filter-bluetooth input[type="radio"]:checked + .radio-indicator::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    background-color: #eeeeee;
+}
+
+.filter-bluetooth input[type="radio"] + .radio-indicator:hover,
+.filter-bluetooth input[type="radio"] + .radio-indicator:checked:hover {
+	border-color: #bcbcbc;
+} 
+
+.filter-bluetooth input[type="radio"] + .radio-indicator:active,
+.filter-bluetooth input[type="radio"] + .radio-indicator:checked:active {
+	border-color: #acacac;
+} 
 
 
 

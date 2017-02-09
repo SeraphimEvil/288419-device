@@ -153,11 +153,22 @@
 
 					<fieldset class="radio-zone">
 						<legend class="form__title">Bluetooth</legend>
-						<input type="radio" id="bluetooth-do" name="bluetooth" checked>
-						<label for="bluetooth-do">Есть</label>
-
-						<input type="radio" id="bluetooth-dont" name="bluetooth">
-						<label for="bluetooth-dont">Нет</label>
+						<ul>
+							<li>
+								<label for="bluetooth-yes" class="filter-bluetooth">
+									<input type="radio" id="bluetooth-yes" name="bluetooth" checked>
+									<span class="radio-indicator"></span>
+									Есть
+								</label>
+							</li>
+							<li>
+								<label for="bluetooth-not" class="filter-bluetooth">
+									<input type="radio" id="bluetooth-not" name="bluetooth">
+									<span class="radio-indicator"></span>
+									Нет
+								</label>
+							</li>
+						</ul>
 					</fieldset>
 
 					<button type="sumbit" class="btn">Показать</button>
