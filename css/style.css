@@ -748,23 +748,6 @@ a  {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* PARTNERS */
 
 .partners {
@@ -1134,7 +1117,7 @@ a  {
 .form__title {
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-weight: 900;
-	font-size: 18px;
+	font-size: 18px; 
 	padding-top: 15px;
 	margin-bottom: 30px;
 	width: 100%;
@@ -1181,6 +1164,12 @@ a  {
     cursor: pointer;
 }
 
+.range-controls .toggle:active {
+	background-color: #7eae29;
+	border-color: #fff;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75);
+}
+
 .range-controls .toggle-min {
     left: -2px;
 }
@@ -1213,14 +1202,69 @@ a  {
 
 /* Фильтр цвета */
 
-.form__title {
-	outline: 1px solid black;
+.checkbox-zone  .form__title {
+	margin-bottom: 10px;
 }
 
-.checkbox-zone {
-	outline: 1px solid red;
+.checkbox-zone ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
+.checkbox-zone label input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-zone label {
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 40px;
+	font-weight: 300;
+}
+
+.filter-color {
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+}
+
+
+.filter-color input[type="checkbox"] + .checkbox-indicator {
+    position: absolute;
+    top: -2px;
+    left: 0;
+
+
+    height: 23px;
+    width: 23px;
+
+  	background-color: #dbdbdb
+}
+
+.filter-color input[type="checkbox"]:checked + .checkbox-indicator::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 7px;
+
+    height: 1px;
+    width: 4.5px;
+    transform: rotate(45deg);
+    background-color: #000;
+}
+
+.filter-color input[type="checkbox"]:checked + .checkbox-indicator::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 9px;
+
+    height: 1px;
+    width: 10px;
+    transform: rotate(-45deg);
+    background-color: #000;
+}
 
 
 

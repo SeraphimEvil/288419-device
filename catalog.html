@@ -115,23 +115,49 @@
 				
 					<fieldset class="checkbox-zone">
 						<legend class="form__title">Цвет</legend>
-						<input type="checkbox" id="black-color" name="color" value="black" checked><label for="black-color">Черный</label>
+						<ul>
+							<li>
+								<label for="black-color" class="filter-color">
+									<input type="checkbox" id="black-color" name="color" value="black" checked>
+									<span class="checkbox-indicator"></span>
+									Черный
+								</label></li>
+							<li>
+								<label for="white-color" class="filter-color">
+									<input type="checkbox" id="white-color" name="color" value="white">
+									<span class="checkbox-indicator"></span>
+									Белый
+								</label></li>
+							<li>
 
-						<input type="checkbox" id="white-color" name="color" value="white"><label for="white-color">Белый</label>
-
-						<input type="checkbox" id="blue-color" name="color" value="blue" checked><label for="blue-color">Синий</label>
-
-						<input type="checkbox" id="red-color" name="color" value="red" checked><label for="red-color">Красный</label>
-
-						<input type="checkbox" id="pink-color" name="color" value="pink"><label for="pink-color">Розовый</label>
+								<label for="blue-color" class="filter-color">
+									<input type="checkbox" id="blue-color" name="color" value="blue" checked>
+									<span class="checkbox-indicator"></span>
+									Синий
+								</label></li>
+							<li>
+								<label for="red-color" class="filter-color">
+									<input type="checkbox" id="red-color" name="color" value="red" checked>
+									<span class="checkbox-indicator"></span>
+									Красный
+								</label></li>
+							<li>
+								<label for="pink-color" class="filter-color">
+									<input type="checkbox" id="pink-color" name="color" value="pink">
+									<span class="checkbox-indicator"></span>
+									Розовый
+								</label></li>
+						</ul>
 					</fieldset>
 
 
-				
 					<fieldset class="radio-zone">
 						<legend class="form__title">Bluetooth</legend>
-						<input type="radio" id="bluetooth-do" name="bluetooth" checked><label for="bluetooth-do">Есть</label>
-						<input type="radio" id="bluetooth-dont" name="bluetooth"><label for="bluetooth-dont">Нет</label>
+						<input type="radio" id="bluetooth-do" name="bluetooth" checked>
+						<label for="bluetooth-do">Есть</label>
+
+						<input type="radio" id="bluetooth-dont" name="bluetooth">
+						<label for="bluetooth-dont">Нет</label>
 					</fieldset>
 
 					<button type="sumbit" class="btn">Показать</button>
