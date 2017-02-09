@@ -217,6 +217,7 @@ a  {
 	background-image: url(../img/plus.png);
 	background-repeat: no-repeat;
 	background-position: 100% 50%;
+	cursor: pointer;
 }
 
 .login:hover,
@@ -356,7 +357,7 @@ a  {
     width: 1040px; 
     min-height: 500px; 
     margin: 0 auto; 
-    overflow: hidden;
+    /*overflow: hidden;*/
 	margin-bottom: 100px;
 }
 
@@ -511,8 +512,9 @@ a  {
 }
 
 .slide:nth-child(3) {
-
-	background-position: 0px 50%; /* здесь должно быть -30px по горизонтали, но overflow: hidden не дает. подскажи пожалуйста :); */
+	margin-left: -30px;
+	padding-left: 30px;
+	background-position: 0px 50%; 
     background-image: url("../img/slider-3.png");
 }
 
@@ -522,11 +524,11 @@ a  {
 
 #btn-1:checked ~ .slides .slide:nth-child(2),
 #btn-1:checked ~ .slides .slide:nth-child(3) {
-  left: 1040px;
+  left: -3040px;
 }
 
 #btn-2:checked ~ .slides .slide:nth-child(1) {
-  left: -1040px;
+  left: -3040px;
 }
 
 #btn-2:checked ~ .slides .slide:nth-child(2) {
@@ -534,15 +536,15 @@ a  {
 }
 
 #btn-2:checked ~ .slides .slide:nth-child(3) {
-  left: -1040px;
+  left: -3040px;
 }
 
 #btn-3:checked ~ .slides .slide:nth-child(1) {
-  left: -1040px;
+  left: -3040px;
 }
 
 #btn-3:checked ~ .slides .slide:nth-child(2) {
-  left: -1040px;
+  left: -3040px;
 }
 
 #btn-3:checked ~ .slides .slide:nth-child(3) {
@@ -639,34 +641,28 @@ a  {
 
 /* слайдер SERVICE */
 
+.service {
+	background-image: linear-gradient(transparent 0px, transparent 100px, #e5e5e5 100px, #e5e5e5 390px);
+}
+
 .service-slider {
 	position: relative;
-
 	width: 1160px; 
     min-height: 390px; 
     margin: 0 auto;
-    overflow: hidden;
 
-    display: flex;
-    justify-content: space-between;
-}
-
-.service-navigation {
-	width: 280px;
-	
-}
-
-.service-slide {
-	outline: 1px solid black;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 880px;
-	height: 390px;
 }
 
 .service-slider input[type=radio] {
     display: none; 
+   /* position: relative;*/
+}
+
+.service-navigation {
+	width: 280px;
+	position: relative;
+	
+	top: 80px;
 }
 
 .service-select {
@@ -677,10 +673,79 @@ a  {
 	padding-left: 30px;
 	padding-right: 20px;
 	width: 110px;
-	margin-bottom: 30px;
+	margin-bottom: 25px;
 	text-align: center;
 	cursor: pointer;
 }
+
+.service-select:active {
+	background-color: #000;
+	color: #f7e184;
+	background-image: none;
+	padding-right: 135px;
+}
+
+.service-active {
+	background-color: #000;
+	color: #f7e184;
+	background-image: none;
+	padding-right: 135px;
+}
+
+.service-active:hover {
+	background-color: #000;
+}
+
+.service-navigation::after {
+	position: absolute;
+	content: "";
+	width: 7px;
+	height: 320px;
+	right: 0;
+	top: -80px;
+	background-color: #000;
+}
+
+.service-slide {
+	position: absolute;
+	top: 71px;
+	right: 60px;
+	width: 700px;
+	height: 390px;
+
+	background-repeat: no-repeat;
+	background-position: 100% 0;
+}
+
+.service-slides .service-slide:nth-child(1) {
+	left: 400px;
+	background-image: url(../img/delivery.png);
+}
+
+.service-slides .service-slide:nth-child(2) {
+	left: -5000px;
+	background-image: url(../img/warranty.png);
+}
+
+.service-slides .service-slide:nth-child(3) {
+	left: -5000px;
+	background-image: url(../img/credit.png);
+}
+
+.service-slider__slogan {
+	font-weight: 900;
+	font-size: 47px;
+	padding: 0;
+	margin: 0;
+}
+
+.service-slider__description {
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 30px;
+}
+
 
 
 
@@ -1076,9 +1141,11 @@ a  {
 	border-top: 2px solid #000000;
 }
 
-fieldset {
+.catalog__left-side fieldset {
 	border: none;
 }
+
+
 /* Фильтр цены */
 
 .range-filter {
@@ -1142,6 +1209,16 @@ fieldset {
 
 .min-price {
 	margin-right: 27px;
+}
+
+/* Фильтр цвета */
+
+.form__title {
+	outline: 1px solid black;
+}
+
+.checkbox-zone {
+	outline: 1px solid red;
 }
 
 
