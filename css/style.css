@@ -44,6 +44,7 @@ a  {
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
+	letter-spacing: 3px;
 }
 
 .btn:hover {
@@ -1088,6 +1089,14 @@ a  {
 	color: #b2b2b2;
 }
 
+.breadcrumbs__link:hover {
+	color: #666666;
+}
+
+.breadcrumbs__link:active {
+	color: #e5e5e5;
+}
+
 
 /* Основной контект КАТАЛОГА.*/
 .catalog__main-content {
@@ -1457,14 +1466,17 @@ a  {
 }
 
 .catalog__item {
+	position: relative;
 	width: 360px;
 	min-height: 460px;
 	margin-bottom: 50px;
 }
 
 .catalog__item-image {
+	
 	width: 360px;
 	height: 380px;
+	cursor: pointer;
 }
 
 .item-info {
@@ -1493,6 +1505,46 @@ a  {
 	text-align: right;
 }
 
+/* Всплывающее окно информации */
+.catalog__item:hover .popup-item {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+}
+
+.popup-item {
+	display: none;
+
+	position: absolute;
+	top: 0;
+	width: 360px;
+	height: 380px;
+	background-color: rgba(238, 238, 238, 0.7);
+	cursor: pointer;
+}
+
+.popup-btn {
+	margin-top: 175px;
+}
+
+.popup-link {
+	margin-top: 20px;
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 36px;
+	color: #7f7f7f;
+}
+
+.popup-link:hover {
+	color: #000;
+}
+
+.popup-link:active {
+	color: #cccccc;
+}
+
 /* Переключатель страниц */
 
 .paginator__list {
@@ -1502,17 +1554,19 @@ a  {
 	justify-content: center;
 	align-items: center;
 	height: 70px;
-	padding: 0 30px;
+	padding: 0;
 }
 
 .paginator__item {
 	font-family: "Gilroy", "Arial", sans-serif;
+	font-weight: 900;
 	font-size: 16px;
 	text-transform: uppercase;
 	min-width: 15px;
 	min-height: 15px;
 	margin-right: 10px;
 	margin-left: 10px;
+	cursor: pointer;
 }
 
 .not-visited {
@@ -1523,10 +1577,28 @@ a  {
 	margin-right: auto;
 	margin-left: 0;
 	letter-spacing: 3px;
+	padding: 25px 30px;
+}
+
+.prev:hover {
+	background-color: #d9d9d9;
+}
+
+.prev:active a {
+	color: #979797;
 }
 
 .next {
 	margin-left: auto;
 	margin-right: 0;
 	letter-spacing: 3px;
+	padding: 25px 30px;
+}
+
+.next:hover {
+	background-color: #d9d9d9;
+}
+
+.next:active a {
+	color: #979797;
 }
