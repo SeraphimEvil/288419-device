@@ -232,7 +232,7 @@
 				<h2 class="feedback__title">Контакты</h2>
 				<p class="feedback__promo">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 				<img class="mini-map" src="img/mini-map.png" alt="Мини-Карта" width="560" height="222">
-				<a href="#" class="btn">Напишите нам</a>
+				<a href="#" class="btn contact-btn">Напишите нам</a>
 			</div>
 		</section>
 	</main>
@@ -268,6 +268,35 @@
 			</div>
 		</div>
 	</footer>
+
+	<div class="modal-content">
+		<button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+		<form class="feedback-form" action="#" method="get">
+			<div class="modal-content-user-info">
+				<div class="modal-content-user-name">
+					<span>Ваше имя:</span><br>
+					<input class="icon-name" type="text" name="user-name" placeholder="Представьтесь, пожалуйста">
+				</div>
+				<div class="modal-content-user-mail">
+					<span>Ваш e-mail:</span><br>
+					<input class="icon-mail" type="e-mail" name="user-mail" placeholder="Для отправки ответа">
+				</div>
+			</div>
+			<div class="modal-content-user-message">
+				<span>Текст письма:</span><br>
+				<textarea name="user-text" placeholder="В свободной форме"></textarea>
+			</div>
+			<button class="btn modal-content-btn" type="submit">Отправить</button>
+		</form>
+	</div>
+
+	<div class="modal-map">
+		<button class="modal-map-close" type="button" title="Закрыть">Закрыть</button>
+		<div class="map-big"></div>
+	</div>
+
+	<script src="js/popup.js"></script>
+
 
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>

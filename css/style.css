@@ -843,6 +843,7 @@ a  {
 .mini-map {
 	margin-top: 5px;
 	margin-bottom: 80px;
+	cursor: pointer;
 }
 
 .feedback__list {
@@ -1635,4 +1636,235 @@ a  {
 
 .next:active a {
 	color: #979797;
+}
+
+
+
+
+
+
+
+/* Всплывающая форма обратной связи */
+.modal-content {
+	z-index: 500;
+	position: fixed;
+	display: none; 
+	width: 760px;
+	min-height: 370px;
+	padding: 90px 100px;
+    left: 50%; 
+    top: 50%;
+    margin-left: -480px;
+    margin-top: -275px;
+    color: #000000;
+
+
+    background: #ffffff;
+    box-shadow: 0px 20px 40px rgba(0, 1, 1, 0.75);
+}
+
+.modal-content-show {
+    display: block;
+    z-index: 500;
+}
+
+.modal-content-close {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    font-size: 0px;
+    background-color: #f7e296;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.modal-content-close::before,
+.modal-content-close::after {
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 12px;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 1px;
+}
+
+.modal-content-close:hover,
+.modal-content-close:hover {
+    background-color: #f0c52e;
+}
+
+.modal-content-close:active::before,
+.modal-content-close:active::after {
+    background-color: #f5d76d;
+}
+
+.modal-content-close::before {
+    transform: rotate(45deg);
+}
+.modal-content-close::after {
+    transform: rotate(-45deg);
+}
+
+
+.modal-content-user-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.modal-content-user-info span {
+	display: inline-block;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+
+.modal-content-user-info input {
+	font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000;
+
+    padding: 14px 20px;
+    margin: 0;
+    width: 320px;
+    border: 2px solid #f2f2f2;
+    background-color: #f2f2f2;
+    outline: none;
+}
+
+.modal-content-user-info input::-webkit-input-placeholder {color:#adadad;}
+.modal-content-user-info input::-moz-placeholder          {color:#adadad;}/* Firefox 19+ */
+.modal-content-user-info input:-moz-placeholder           {color:#adadad;}/* Firefox 18- */
+.modal-content-user-info input:-ms-input-placeholder      {color:#adadad;}
+
+.modal-content-user-info input:hover::-webkit-input-placeholder {color:#a8a8a8;}
+.modal-content-user-info input:hover::-moz-placeholder          {color:#a8a8a8;}/* Firefox 19+ */
+.modal-content-user-info input:hover:-moz-placeholder           {color:#a8a8a8;}/* Firefox 18- */
+.modal-content-user-info input:hover:-ms-input-placeholder      {color:#a8a8a8;}
+
+.modal-content-user-info input:hover {
+	background-color: #eaeaea;
+	border-color: #eaeaea;
+}
+
+.modal-content-user-info input:invalid {
+	background-color: #f6dada;
+	border-color: #f6dada;
+}
+
+.modal-content-user-info input:focus {
+	background-color: transparent;
+}
+
+.modal-content-user-message {
+    margin-bottom: 50px;
+}
+
+.modal-content-user-message span {
+	display: inline-block;
+	font-weight: 900;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+
+.modal-content-user-message textarea {
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+    padding: 20px 20px;
+    border: 2px solid #f2f2f2;
+    background-color: #f2f2f2;
+    outline: none;
+    width: 716px;
+    height: 118px;
+}
+
+.modal-content-user-message textarea:focus {
+	background-color: transparent;
+}
+
+.modal-content-user-message textarea::-webkit-input-placeholder {color:#adadad;}
+.modal-content-user-message textarea::-moz-placeholder          {color:#adadad;}/* Firefox 19+ */
+.modal-content-user-message textarea:-moz-placeholder           {color:#adadad;}/* Firefox 18- */
+.modal-content-user-message textarea:-ms-input-placeholder      {color:#adadad;}
+
+.modal-content-user-message textarea:hover::-webkit-input-placeholder {color:#a8a8a8;}
+.modal-content-user-message textarea:hover::-moz-placeholder          {color:#a8a8a8;}/* Firefox 19+ */
+.modal-content-user-message textarea:hover:-moz-placeholder           {color:#a8a8a8;}/* Firefox 18- */
+.modal-content-user-message textarea:hover:-ms-input-placeholder      {color:#a8a8a8;}
+
+
+/* Всплывающая карта */
+
+.modal-map {
+	z-index: 500;
+	position: fixed;
+	display: none; 
+	width: 960px;
+	height: 560px;
+    left: 50%; 
+    top: 50%;
+    margin-left: -480px;
+    margin-top: -280px;
+    background: #ffffff;
+    box-shadow: 0px 20px 40px rgba(0, 1, 1, 0.75);
+    background-image: url(../img/map-big.jpg);
+    background-position: -17px -7px;
+}
+
+.modal-map--show {
+	display: block;
+}
+
+.modal-map-close {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    font-size: 0px;
+    background-color: #f7e296;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.modal-map-close::before,
+.modal-map-close::after {
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 12px;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 1px;
+}
+
+.modal-map-close:hover,
+.modal-map-close:hover {
+    background-color: #f0c52e;
+}
+
+.modal-map-close:active::before,
+.modal-map-close:active::after {
+    background-color: #f5d76d;
+}
+
+.modal-map-close::before {
+    transform: rotate(45deg);
+}
+.modal-map-close::after {
+    transform: rotate(-45deg);
 }
