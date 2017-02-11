@@ -891,6 +891,15 @@ a  {
 	font-weight: 900;
 	font-size: 48px;
 	color: #f7e184;
+	cursor: pointer;
+}
+
+.footer__logo:hover {
+	color: #f0c52e;
+}
+
+.footer__logo:active {
+	opacity: 0.3;
 }
 
 .adress {
@@ -911,6 +920,24 @@ a  {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+}
+
+.footer__login,
+.footer__compare,
+.footer__cart {
+	opacity: 0.7;
+}
+
+.footer__login:hover,
+.footer__compare:hover,
+.footer__cart:hover {
+	opacity: 1;
+}
+
+.footer__login:active,
+.footer__compare:active,
+.footer__cart:active {
+	opacity: 0.3;
 }
 
 .footer__login,
@@ -975,6 +1002,14 @@ a  {
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-weight: 900;
 	text-transform: uppercase;
+}
+
+.footer-service a:hover {
+	opacity: 0.6;
+}
+
+.footer-service a:active {
+	opacity: 0.3;
 }
 
 .footer__social {
