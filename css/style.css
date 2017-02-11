@@ -43,6 +43,7 @@ a  {
 	background-image: linear-gradient(transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%);
 	border: none;
 	background-color: transparent;
+	cursor: pointer;
 }
 
 .btn:hover {
@@ -187,7 +188,10 @@ a  {
 }
 
 .user-block {
-	/*width: 280px;*/
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 225px;
 	margin-right: 5px;
 }
 
@@ -254,7 +258,7 @@ a  {
 	background-position: 0 0;
 
 	left: 0;
-	top: 5px;
+	top: 13px;
 }
 
 .compare::before {
@@ -1041,6 +1045,10 @@ a  {
 	padding-left: 60px;
 }
 
+.quit {
+	opacity: 0.3;
+}
+
 /* ХЛЕБНЫЕ КРОШКИ */
 
 .breadcrumbs {
@@ -1370,15 +1378,75 @@ a  {
 	
 	width: 300px;
 	margin-left: 50px;
-	color: #000000;
+	
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
 .sorting a {
-	padding-right: 
+	color: #a4a4a4;
 }
+
+.sorting a:hover {
+	color: #666666;
+}
+
+.sorting a:active {
+	color: #000;
+}
+
+
+.sorting .active-link {
+	color: #000;
+}
+
+.sorting .active-link:hover {
+	color: #000;
+}
+
+.triangles {
+	margin-left: auto;
+	width: 60px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.triangle-top {
+	background: transparent;
+    position: relative;
+}
+
+.triangle-top::after {
+	content: ''; 
+    position: absolute; 
+    left: 0px; top: 25px; 
+    border: 9px solid transparent; 
+    border-bottom: 9px solid #bcbcbc; 
+}
+
+.triangle-top:hover::after {
+	border-bottom-color: #999;
+}
+
+.triangle-top:active::after {
+	border-bottom-color: #000;
+}
+
+.triangle-bottom {
+	background: transparent;
+    position: relative;
+}
+
+.triangle-bottom::after {
+	content: ''; 
+    position: absolute; 
+    right: 0px; top: 33px; 
+    border: 9px solid transparent; 
+    border-top: 9px solid #000; 
+}
+
 
 /* ТОВАРЫ */
 
