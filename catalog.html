@@ -5,7 +5,7 @@
 	<title>HTML Academy: Девайс - Каталог</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 	<header class="page-header">
@@ -33,7 +33,7 @@
 			</div>
 			<nav class="user-navigation">
 				<div class="header__left-side">
-					<a class="nav__catalog"">Каталог товаров</a>
+					<a class="nav__catalog">Каталог товаров</a>
 					<div class="sub-menu">
 						<ul class="sub-menu__list">
 							<li class="sub-menu__item">
@@ -74,109 +74,30 @@
 		</div>
 	</header>
 
-	<main class="container">
-		<h1 class="page__title">Моноподы для селфи</h1>
-		<nav class="breadcrumbs">
-			<ul class="breadcrumbs__list">
-				<li class="breadcrumbs__item">
-					<a class="breadcrumbs__link" href="index.html">Главная</a>
-				</li>
-				<li class="breadcrumbs__item">
-					<a class="breadcrumbs__link" href="#">Каталог товаров</a>
-				</li>
-				<li class="breadcrumbs__item">
-					<a class="breadcrumbs__link active-breadcrumb">Моноподы для селфи</a>
-				</li>
-			</ul>
-		</nav>
+	<main>
+		<div class="container">
+			<h1 class="page__title">Моноподы для селфи</h1>
+			<nav class="breadcrumbs">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="index.html">Главная</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="#">Каталог товаров</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link active-breadcrumb">Моноподы для селфи</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
 
-		<div class="catalog__main-content">
-			<section class="catalog__left-side">
+		<div class="container-catalog-header">
+			<div class="container catalog__main-content">
 				<div class="left-side__header">
 					<h2 class="catalog__title">Фильтр:</h2>
 				</div>
-				
-				<form action="" method="get">
 
-					<fieldset class="range-filter">
-						<legend class="form__title">Стоимость</legend>
-						<div class="range-controls">
-							<div class="scale">
-								<div class="bar"></div>
-							</div>
-							<div class="toggle toggle-min"></div>
-							<div class="toggle toggle-max"></div>
-						</div>
-						<div class="price-controls">
-							<label class="min-price"> от <input type="text" name="min-price" value="0"></label>
-							<label class="max-price"> до <input type="text" name="max-price" value="5000"></label>
-						</div>
-					</fieldset>
-
-				
-					<fieldset class="checkbox-zone">
-						<legend class="form__title">Цвет</legend>
-						<ul>
-							<li>
-								<label for="black-color" class="filter-color">
-									<input type="checkbox" id="black-color" name="color" value="black" checked>
-									<span class="checkbox-indicator"></span>
-									Черный
-								</label></li>
-							<li>
-								<label for="white-color" class="filter-color">
-									<input type="checkbox" id="white-color" name="color" value="white">
-									<span class="checkbox-indicator"></span>
-									Белый
-								</label></li>
-							<li>
-
-								<label for="blue-color" class="filter-color">
-									<input type="checkbox" id="blue-color" name="color" value="blue" checked>
-									<span class="checkbox-indicator"></span>
-									Синий
-								</label></li>
-							<li>
-								<label for="red-color" class="filter-color">
-									<input type="checkbox" id="red-color" name="color" value="red" checked>
-									<span class="checkbox-indicator"></span>
-									Красный
-								</label></li>
-							<li>
-								<label for="pink-color" class="filter-color">
-									<input type="checkbox" id="pink-color" name="color" value="pink">
-									<span class="checkbox-indicator"></span>
-									Розовый
-								</label></li>
-						</ul>
-					</fieldset>
-
-
-					<fieldset class="radio-zone">
-						<legend class="form__title">Bluetooth</legend>
-						<ul>
-							<li>
-								<label for="bluetooth-yes" class="filter-bluetooth">
-									<input type="radio" id="bluetooth-yes" name="bluetooth" checked>
-									<span class="radio-indicator"></span>
-									Есть
-								</label>
-							</li>
-							<li>
-								<label for="bluetooth-not" class="filter-bluetooth">
-									<input type="radio" id="bluetooth-not" name="bluetooth">
-									<span class="radio-indicator"></span>
-									Нет
-								</label>
-							</li>
-						</ul>
-					</fieldset>
-
-					<button type="sumbit" class="btn">Показать</button>
-				</form>
-			</section>
-
-			<section class="catalog__right-side">
 				<div class="right-side__header">
 					<h2 class="catalog__title">Сортировка:</h2> 
 					<div class="sorting">
@@ -189,80 +110,167 @@
 						<a href="#" class="triangle-bottom"></a>
 					</div>
 				</div>
-				
-				<div class="catalog">
-					<aticle class="catalog__item">
-						<img class="catalog__item-image" src="img/item1.png" alt="Товар 1" width="360" height="380">
-						<div class="item-info">
-							<h3 class="catalog__item-description">Любительская селфи-палка</h3>
-							<span class="catalog__item-price">500 руб.</span>
-						</div>	
-						<div class="popup-item">
-							<button href="#" class="btn popup-btn">в корзину</button>
-							<a href="#" class="popup-link">Добавить к сравнению</a>
-						</div>
-					</aticle>
-					<aticle class="catalog__item">
-						<img class="catalog__item-image" src="img/item2.png" alt="Товар 2" width="360" height="380">
-						<div class="item-info">
-							<h3 class="catalog__item-description">Профессиональная <br> селфи-палка</h3>
-							<span class="catalog__item-price">1500 руб.</span>
-						</div>
-						<div class="popup-item">
-							<button href="#" class="btn popup-btn">в корзину</button>
-							<a href="#" class="popup-link">Добавить к сравнению</a>
-						</div>
-					</aticle>
-					<aticle class="catalog__item">
-						<img class="catalog__item-image" src="img/item3.png" alt="Товар 3" width="360" height="380">
-						<div class="item-info">
-							<h3 class="catalog__item-description">Непотопляемая селфи-палка</h3>
-							<span class="catalog__item-price">2 500 руб.</span>
-						</div>
-						<div class="popup-item">
-							<button href="#" class="btn popup-btn">в корзину</button>
-							<a href="#" class="popup-link">Добавить к сравнению</a>
-						</div>
-					</aticle>
-					<aticle class="catalog__item">
-						<img class="catalog__item-image" src="img/item4.png" alt="Товар 4" width="360" height="380">
-						<div class="item-info">
-							<h3 class="catalog__item-description">Селфи-палка &laquo;Следуй за <br> мной&raquo;</h3>
-							<span class="catalog__item-price">4 900 руб.</span>
-						</div>
-						<div class="popup-item">
-							<button href="#" class="btn popup-btn">в корзину</button>
-							<a href="#" class="popup-link">Добавить к сравнению</a>
-						</div>
-					</aticle>
-				</div>
-				<div class="paginator">
-					<ul class="paginator__list">
-						<li class="prev paginator__item">
-							<a href="#">Назад</a>
-						</li>
-						<li class="paginator__item">
-							<a>1</a>
-						</li>
-						<li  class="paginator__item">
-							<a class="not-visited" href="#">2</a>
-						</li>
-						<li  class="paginator__item">
-							<a class="not-visited" href="#">3</a>
-						</li>
-						<li class="next paginator__item">
-							<a href="#">Вперед</a>						
-						</li>
-					</ul>
-				</div>
-			</section>
+			</div>
+		</div>
+
+		<div class="container-catalog-content">
+			<div class="container catalog__main-content">
+				<section class="catalog__left-side">
+					<form action="" method="get">
+
+						<fieldset class="range-filter">
+							<legend class="form__title">Стоимость</legend>
+							<div class="range-controls">
+								<div class="scale">
+									<div class="bar"></div>
+								</div>
+								<div class="toggle toggle-min"></div>
+								<div class="toggle toggle-max"></div>
+							</div>
+							<div class="price-controls">
+								<label class="min-price"> от <input type="text" name="min-price" value="0"></label>
+								<label class="max-price"> до <input type="text" name="max-price" value="5000"></label>
+							</div>
+						</fieldset>
+
+					
+						<fieldset class="checkbox-zone">
+							<legend class="form__title">Цвет</legend>
+							<ul>
+								<li>
+									<label for="black-color" class="filter-color">
+										<input type="checkbox" id="black-color" name="color" value="black" checked>
+										<span class="checkbox-indicator"></span>
+										Черный
+									</label></li>
+								<li>
+									<label for="white-color" class="filter-color">
+										<input type="checkbox" id="white-color" name="color" value="white">
+										<span class="checkbox-indicator"></span>
+										Белый
+									</label></li>
+								<li>
+
+									<label for="blue-color" class="filter-color">
+										<input type="checkbox" id="blue-color" name="color" value="blue" checked>
+										<span class="checkbox-indicator"></span>
+										Синий
+									</label></li>
+								<li>
+									<label for="red-color" class="filter-color">
+										<input type="checkbox" id="red-color" name="color" value="red" checked>
+										<span class="checkbox-indicator"></span>
+										Красный
+									</label></li>
+								<li>
+									<label for="pink-color" class="filter-color">
+										<input type="checkbox" id="pink-color" name="color" value="pink">
+										<span class="checkbox-indicator"></span>
+										Розовый
+									</label></li>
+							</ul>
+						</fieldset>
+
+
+						<fieldset class="radio-zone">
+							<legend class="form__title">Bluetooth</legend>
+							<ul>
+								<li>
+									<label for="bluetooth-yes" class="filter-bluetooth">
+										<input type="radio" id="bluetooth-yes" name="bluetooth" checked>
+										<span class="radio-indicator"></span>
+										Есть
+									</label>
+								</li>
+								<li>
+									<label for="bluetooth-not" class="filter-bluetooth">
+										<input type="radio" id="bluetooth-not" name="bluetooth">
+										<span class="radio-indicator"></span>
+										Нет
+									</label>
+								</li>
+							</ul>
+						</fieldset>
+
+						<button type="sumbit" class="btn">Показать</button>
+					</form>
+				</section>
+
+				<section class="catalog__right-side">
+					<div class="catalog">
+						<aticle class="catalog__item">
+							<img class="catalog__item-image" src="img/item1.png" alt="Товар 1" width="360" height="380">
+							<div class="item-info">
+								<h3 class="catalog__item-description">Любительская селфи-палка</h3>
+								<span class="catalog__item-price">500 руб.</span>
+							</div>	
+							<div class="popup-item">
+								<button href="#" class="btn popup-btn">в корзину</button>
+								<a href="#" class="popup-link">Добавить к сравнению</a>
+							</div>
+						</aticle>
+						<aticle class="catalog__item">
+							<img class="catalog__item-image" src="img/item2.png" alt="Товар 2" width="360" height="380">
+							<div class="item-info">
+								<h3 class="catalog__item-description">Профессиональная <br> селфи-палка</h3>
+								<span class="catalog__item-price">1500 руб.</span>
+							</div>
+							<div class="popup-item">
+								<button href="#" class="btn popup-btn">в корзину</button>
+								<a href="#" class="popup-link">Добавить к сравнению</a>
+							</div>
+						</aticle>
+						<aticle class="catalog__item">
+							<img class="catalog__item-image" src="img/item3.png" alt="Товар 3" width="360" height="380">
+							<div class="item-info">
+								<h3 class="catalog__item-description">Непотопляемая селфи-палка</h3>
+								<span class="catalog__item-price">2 500 руб.</span>
+							</div>
+							<div class="popup-item">
+								<button href="#" class="btn popup-btn">в корзину</button>
+								<a href="#" class="popup-link">Добавить к сравнению</a>
+							</div>
+						</aticle>
+						<aticle class="catalog__item">
+							<img class="catalog__item-image" src="img/item4.png" alt="Товар 4" width="360" height="380">
+							<div class="item-info">
+								<h3 class="catalog__item-description">Селфи-палка &laquo;Следуй за <br> мной&raquo;</h3>
+								<span class="catalog__item-price">4 900 руб.</span>
+							</div>
+							<div class="popup-item">
+								<button href="#" class="btn popup-btn">в корзину</button>
+								<a href="#" class="popup-link">Добавить к сравнению</a>
+							</div>
+						</aticle>
+					</div>
+					<div class="paginator">
+						<ul class="paginator__list">
+							<li class="prev paginator__item">
+								<a href="#">Назад</a>
+							</li>
+							<li class="paginator__item">
+								<a>1</a>
+							</li>
+							<li  class="paginator__item">
+								<a class="not-visited" href="#">2</a>
+							</li>
+							<li  class="paginator__item">
+								<a class="not-visited" href="#">3</a>
+							</li>
+							<li class="next paginator__item">
+								<a href="#">Вперед</a>						
+							</li>
+						</ul>
+					</div>
+				</section>
+			</div>
 		</div>
 	</main>
 
 	<footer class="page-footer">
 		<div class="container">
 			<div class="footer__row">
-				<div><a href="index.html" id="footer__logo">DEVICE</a></div>
+				<div><a href="index.html" class="footer__logo">DEVICE</a></div>
 				<div class="footer__user-nav">
 					<a class="footer__login" href="#">Войти</a>
 					<a class="footer__compare" href="#">Сравнить</a>
@@ -271,13 +279,13 @@
 				
 			</div>
 			<div class="footer__row">
-				<div class="adress">г.Москва, ул.Строителей, 15</div>
+				<div class="adress">г. Москва, ул. Строителей, 15</div>
 				<div class="footer-service">
 					<a href="#">Доставка</a>
 					<a href="#">Гарантия</a>
 					<a href="#">Контакты</a>
 				</div>
-				<div class="phone">Тел.:+7(495)495-95-95</div>
+				<div class="phone">Тел.: +7 (495) 495-95-95</div>
 			</div>
 			<div class="footer__row">
 				<div class="empty__footer-left"></div> <!-- создано для сетки -->
@@ -290,7 +298,5 @@
 			</div>
 		</div>
 	</footer>
-
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>
