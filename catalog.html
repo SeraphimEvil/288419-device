@@ -5,7 +5,7 @@
 	<title>HTML Academy: Девайс - Каталог</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header class="page-header">
@@ -15,9 +15,9 @@
 			</div>
 			<div class="user-interactive">
 				<div class="header__left-side">
-					<form class="search-form" action="" method="post">
+					<form class="search-form" action="#" method="post">
 						<input class="site-search" type="text" placeholder="Поиск по сайту">
-						<button type="sumbit" class="search-btn">Найти</button>
+						<button type="submit" class="search-btn">Найти</button>
 					</form>
 				</div>
 				<div class="header__rigth-side">
@@ -116,7 +116,7 @@
 		<div class="container-catalog-content">
 			<div class="container catalog__main-content">
 				<section class="catalog__left-side">
-					<form action="" method="get">
+					<form action="#" method="get">
 
 						<fieldset class="range-filter">
 							<legend class="form__title">Стоимость</legend>
@@ -192,12 +192,12 @@
 							</ul>
 						</fieldset>
 
-						<button type="sumbit" class="btn">Показать</button>
+						<button type="submit" class="btn">Показать</button>
 					</form>
 				</section>
 
-				<section class="catalog__right-side">
-					<div class="catalog">
+				<div class="catalog__right-side">
+					<section class="catalog">
 						<aticle class="catalog__item">
 							<img class="catalog__item-image" src="img/item1.png" alt="Товар 1" width="360" height="380">
 							<div class="item-info">
@@ -205,7 +205,7 @@
 								<span class="catalog__item-price">500 руб.</span>
 							</div>	
 							<div class="popup-item">
-								<button href="#" class="btn popup-btn">в корзину</button>
+								<a href="#" class="btn popup-btn">в корзину</a>
 								<a href="#" class="popup-link">Добавить к сравнению</a>
 							</div>
 						</aticle>
@@ -216,7 +216,7 @@
 								<span class="catalog__item-price">1500 руб.</span>
 							</div>
 							<div class="popup-item">
-								<button href="#" class="btn popup-btn">в корзину</button>
+								<a href="#" class="btn popup-btn">в корзину</a>
 								<a href="#" class="popup-link">Добавить к сравнению</a>
 							</div>
 						</aticle>
@@ -227,7 +227,7 @@
 								<span class="catalog__item-price">2 500 руб.</span>
 							</div>
 							<div class="popup-item">
-								<button href="#" class="btn popup-btn">в корзину</button>
+								<a href="#" class="btn popup-btn">в корзину</a>
 								<a href="#" class="popup-link">Добавить к сравнению</a>
 							</div>
 						</aticle>
@@ -238,11 +238,11 @@
 								<span class="catalog__item-price">4 900 руб.</span>
 							</div>
 							<div class="popup-item">
-								<button href="#" class="btn popup-btn">в корзину</button>
+								<a href="#" class="btn popup-btn">в корзину</a>
 								<a href="#" class="popup-link">Добавить к сравнению</a>
 							</div>
 						</aticle>
-					</div>
+					</section>
 					<div class="paginator">
 						<ul class="paginator__list">
 							<li class="prev paginator__item">
@@ -262,7 +262,7 @@
 							</li>
 						</ul>
 					</div>
-				</section>
+				</div>
 			</div>
 		</div>
 	</main>

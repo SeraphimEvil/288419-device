@@ -5,7 +5,7 @@
 	<title>HTML Academy: Девайс</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.min.css">	
+	<link rel="stylesheet" href="css/style.css">	
 </head>
 <body>
 	<header class="page-header">
@@ -13,9 +13,9 @@
 			<div class="site-logo">DEVICE</div>
 			<div class="user-interactive">
 				<div class="header__left-side">
-					<form class="search-form" action="" method="post">
+					<form class="search-form" action="#" method="post">
 						<input class="site-search" type="text" placeholder="Поиск по сайту">
-						<button type="sumbit" class="search-btn">Найти</button>
+						<button type="submit" class="search-btn">Найти</button>
 					</form>
 				</div>
 				<div class="header__rigth-side">
@@ -277,16 +277,16 @@
 			<div class="modal-content-user-info">
 				<div class="modal-content-user-name">
 					<label for="user-name">Ваше имя:</label>
-					<input class="icon-name" type="text" name="user-name" placeholder="Представьтесь, пожалуйста">
+					<input class="icon-name" type="text" name="user-name" id="user-name" placeholder="Представьтесь, пожалуйста">
 				</div>
 				<div class="modal-content-user-mail">
 					<label for="user-mail">Ваш e-mail:</label>
-					<input class="icon-mail" type="e-mail" name="user-mail" placeholder="Для отправки ответа">
+					<input class="icon-mail" type="email" name="user-mail" id="user-mail" placeholder="Для отправки ответа">
 				</div>
 			</div>
 			<div class="modal-content-user-message">
 				<label for="user-text">Текст письма:</label>
-				<textarea name="user-text" placeholder="В свободной форме"></textarea>
+				<textarea name="user-text" id="user-text" placeholder="В свободной форме"></textarea>
 			</div>
 			<button class="btn modal-content-btn" type="submit">Отправить</button>
 		</form>

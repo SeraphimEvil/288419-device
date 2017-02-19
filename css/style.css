@@ -420,10 +420,7 @@ a  {
 
 .slider-text {
 	width: 500px;
-	/*position: absolute;*/
 	margin-left: auto;
-	/*right: 0px;
-	top: -9px;*/
 	margin-top: -9px;
 }
 
@@ -433,7 +430,7 @@ a  {
 	font-weight: 900;
 	font-size: 179.2px;
 	color: #fff;
-	top: -17px;
+	top: -24px;
 	right: -12px; /* настроить */
 }
 
@@ -443,7 +440,7 @@ a  {
 	font-weight: 900;
 	font-size: 179.2px;
 	color: #fff;
-	top: -17px;
+	top: -24px;
 	right: -12px; /* настроить */
 }
 
@@ -453,7 +450,7 @@ a  {
 	font-weight: 900;
 	font-size: 179.2px;
 	color: #fff;
-	top: -17px;
+	top: -24px;
 	right: -12px; /* настроить */
 }
 
@@ -1636,11 +1633,32 @@ a.footer__logo:active {
 }
 
 .catalog__item-image {
-	
+	position: relative;
 	width: 360px;
 	height: 380px;
 	cursor: pointer;
 }
+
+.catalog__item:last-child::after {
+	position: absolute;
+	content: "NEW";
+	font-weight: 900;
+	font-size: 14px;
+	text-transform: uppercase;
+	height: 56px;
+	width: 56px;
+	border-radius: 50%;
+	border: 2px solid #d7d7d7;
+	color: #d7d7d7;
+	display: inline-block;
+	vertical-align: top;
+	top: 29px;
+	right: 27px;
+	text-align: center;
+	line-height: 56px;
+}
+
+
 
 .item-info {
 	display: flex;
